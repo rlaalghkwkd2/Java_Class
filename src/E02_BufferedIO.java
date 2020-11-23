@@ -31,7 +31,7 @@ public class E02_BufferedIO {
 
 		try {
 			long start_time = System.currentTimeMillis();
-			FileOutputStream fout = new FileOutputStream("D:\\java_io\\bufferedout.txt");
+			FileOutputStream fout = new FileOutputStream("C:\\java_io\\bufferedout.txt");
 
 			// # 버퍼의 크기가 1024인 경우
 			// - 데이터를 해당 OutputStream에 쓸 때 1024바이트의 데이터가
@@ -62,7 +62,7 @@ public class E02_BufferedIO {
 		// - InputStream을 생성자로 요구한다.
 		System.out.println("-----------------");
 		try {
-			FileInputStream fin = new FileInputStream("D:\\java_io\\bufferedout.txt");
+			FileInputStream fin = new FileInputStream("C:\\java_io\\bufferedout.txt");
 			BufferedInputStream bin = new BufferedInputStream(fin, 1024);
 
 			// # read()의 기본 오버로딩

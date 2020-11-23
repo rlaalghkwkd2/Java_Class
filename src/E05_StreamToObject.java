@@ -37,7 +37,7 @@ public class E05_StreamToObject {
 	public static void main(String[] args) {
 
 		// AutoClose가 구현된 클래스들은 try-with-resources를 이용할 수 잇다.
-		try (FileOutputStream fout = new FileOutputStream("D:\\java_io\\objectout.txt");
+		try (FileOutputStream fout = new FileOutputStream("C:\\java_io\\objectout.txt");
 				BufferedOutputStream bout = new BufferedOutputStream(fout);
 				ObjectOutputStream oout = new ObjectOutputStream(bout);) 
 		{
@@ -52,7 +52,7 @@ public class E05_StreamToObject {
 			e.printStackTrace();
 		}
 		
-		try(FileInputStream fin = new FileInputStream("D:\\java_io\\objectout.txt");
+		try(FileInputStream fin = new FileInputStream("C:\\java_io\\objectout.txt");
 				BufferedInputStream bin = new BufferedInputStream(fin);
 				ObjectInputStream oin = new ObjectInputStream(bin);)
 		{

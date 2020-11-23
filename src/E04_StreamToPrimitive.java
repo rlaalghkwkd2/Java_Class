@@ -15,7 +15,7 @@ public class E04_StreamToPrimitive {
 	public static void main(String[] args) {
 		try {
 			DataOutputStream dout = new DataOutputStream(
-					new BufferedOutputStream(new FileOutputStream("D:\\java_io\\dataout.txt"), 2048));
+					new BufferedOutputStream(new FileOutputStream("C:\\java_io\\dataout.txt"), 2048));
 
 			// 데이터를 int 혹은 byte[]로의 변환할 필요가 없다.
 			dout.writeInt(123);
@@ -35,7 +35,7 @@ public class E04_StreamToPrimitive {
 
 		try {
 			DataInputStream din = new DataInputStream(
-					new BufferedInputStream(new FileInputStream("D:\\java_io\\dataout.txt")));
+					new BufferedInputStream(new FileInputStream("C:\\java_io\\dataout.txt")));
 
 			// 썻던 순서를 잘 기억해서 순서대로 꺼내야한다.
 			int data1 = din.readInt();

@@ -88,7 +88,7 @@ public class E06_JSON_Me {
 			}
 		}
 
-		try (FileOutputStream fout = new FileOutputStream("C:\\java_io\\JSON2.json");
+		try (FileOutputStream fout = new FileOutputStream("C:\\java_io\\JSON.json");
 				BufferedOutputStream bout = new BufferedOutputStream(fout);
 				PrintWriter pw = new PrintWriter(bout);) {
 			pw.print(result);

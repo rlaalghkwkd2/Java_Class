@@ -38,7 +38,7 @@ public class E01_JavaIO {
 		// - Java IO 클래스들은 대부분 필수적으로 처리해야하는 예외가 존재한다.
 
 		try {
-			FileOutputStream fout = new FileOutputStream("D:\\java_io\\testout.txt");
+			FileOutputStream fout = new FileOutputStream("C:\\java_io\\testout.txt");
 			// 1. int를 사용하는 방식
 			// fout.write(65);
 
@@ -61,7 +61,7 @@ public class E01_JavaIO {
 		// - 파일로부터 입력 받는데 특화된 InputStream
 
 		try {
-			FileInputStream fin = new FileInputStream("D:\\java_io\\testout.txt");
+			FileInputStream fin = new FileInputStream("C:\\java_io\\testout.txt");
 			byte[] bytes = new byte[100];
 
 			// 읽은 값이 -1이 아닌동안 계속 읽어들인다

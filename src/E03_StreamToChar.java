@@ -34,9 +34,9 @@ public class E03_StreamToChar {
 
 		try {
 			long start_time = System.currentTimeMillis();
-			FileReader fr = new FileReader("D:\\java_io\\bufferedout.txt");
+			FileReader fr = new FileReader("C:\\java_io\\bufferedout.txt");
 
-			FileInputStream fin = new FileInputStream("D:\\java_io\\bufferedout.txt");
+			FileInputStream fin = new FileInputStream("C:\\java_io\\bufferedout.txt");
 			InputStreamReader ir = new InputStreamReader(fin, "EUC-KR");
 
 			// FileReader를 BufferedReader로 업그레이드
@@ -63,13 +63,13 @@ public class E03_StreamToChar {
 		// - 프로그래머가 좀 더 편리하게 OutputStream을 이용할 수 있다.
 		try {
 			long start_time = System.currentTimeMillis();
-			FileOutputStream fout = new FileOutputStream("D:\\java_io\\bufferedout.txt");
+			FileOutputStream fout = new FileOutputStream("C:\\java_io\\bufferedout.txt");
 			
 			// OutputStream방식에서 Writer로 변환 (byte -> char)
 			OutputStreamWriter ow = new OutputStreamWriter(fout, "UTF-8");
 			
 			// OutputStream을 Writer로 변환하는 과정을 생략하는 클레스
-			FileWriter fw = new FileWriter("D:\\java_io\\bufferedout.txt");
+			FileWriter fw = new FileWriter("C:\\java_io\\bufferedout.txt");
 
 			// Buffered : 성능 향상
 			BufferedWriter bw = new BufferedWriter(fw, 4096);
