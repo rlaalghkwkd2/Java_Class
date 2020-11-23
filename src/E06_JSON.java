@@ -95,7 +95,7 @@ public class E06_JSON {
 				
 		// System.out.println(builder);
 		
-		FileWriter fw = new FileWriter("D:\\java_io\\data.json");
+		FileWriter fw = new FileWriter("C:\\java_io\\data.json");
 		
 		fw.write(new String(builder));
 		
@@ -105,7 +105,7 @@ public class E06_JSON {
 	}
 	
 	public static void jsonFileToMap(Map<String, Object> map) throws IOException {
-		FileReader fr = new FileReader("D:\\java_io\\data.json");
+		FileReader fr = new FileReader("C:\\java_io\\data.json");
 				
 		StringBuilder sb = new StringBuilder();
 		int ch;

@@ -26,7 +26,7 @@ public class E06_JSONMe {
 	   
 	
 	public static void jsonFileToMap(Map<String, Object> map) throws IOException {
-		FileReader fr = new FileReader("D:\\java_io\\data.json");
+		FileReader fr = new FileReader("C:\\java_io\\data.json");
 		StringBuilder builder = new StringBuilder();
 		StringBuilder builder2 = new StringBuilder();
 		Object[] valuerr = null;
@@ -161,7 +161,7 @@ public class E06_JSONMe {
 
 		// System.out.println(builder);
 
-		FileWriter fw = new FileWriter("D:\\java_io\\data.json");
+		FileWriter fw = new FileWriter("C:\\java_io\\data.json");
 
 		fw.write(new String(builder));
 

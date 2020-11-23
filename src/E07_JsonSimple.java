@@ -44,7 +44,7 @@ public class E07_JsonSimple {
 		
 		try {
 			// File에서 읽어온 데이터를 JSON형태의 Map로 파싱
-			JSONObject obj2 = (JSONObject) parser.parse(new FileReader("D:\\java_io\\data.json"));
+			JSONObject obj2 = (JSONObject) parser.parse(new FileReader("C:\\java_io\\data.json"));
 			
 			System.out.println(obj2.get("승"));
 			System.out.println(obj2.get("무"));
