@@ -1,0 +1,83 @@
+# Git
+ - .git폴더가 있는 폴더의 내용을 모두 관리해주는 프로그램
+ - 뭔가가 조금이라도 변하면 모든 것을 알아채고 관리한다 
+ - 원래는 Git을 설치해야 하지만, Eclipse에 Git이 내장되어 있다 
+
+# GitHub
+ - 자기 컴퓨터에서 작업하던 .git으로 관리하던 폴더의 내용을
+   온라인에 올려서 공유하는 것
+ - GitHub로 저장하는 것을 push라고 하고
+   GitHub에서 자기 컴퓨터로 내려받는 것을 pull이라고 한다
+ - clone이라는 기능을 통해 모두 복사해서 가져올 수도 있다 
+
+# Git을 통한 폴더 관리의 기본
+ - git폴더 내부에 무엇인가 변하면 깃이 그것을 알고있다
+ - unstaged 상태 : 이번 커밋에 포함하지 않을 변화들
+ - staged 상태 : 이번 커밋에 포함시킬 변화들 
+ - 원래 콘솔화면에서는 git add명령어를 이용해야 한다
+ - commit : 현재 상태의 스냅샷을 찍는다
+
+# commit
+ - 현재 stage에 추가된 파일들을 하나의 커밋으로 만든다
+ - Git은 언제든 관리하는 폴더의 모든 내용을 
+   원하는 commit 상태로 바꿀 수 있다
+
+# .gitignore
+ - Git이 특정 확장자를 무시하도록 설정할 수 있다
+ - .gitignore파일 내부에 작성한 확장자 또는 경로를 무시하게 된다
+
+# 이전 커밋들로 돌아가기
+ - 원래는 명령어를 써야한다
+ - 우클릭 -> switch to -> commit
+ - Show View -> Git Reflog에서 원하는 커밋을 check out
+
+# Branch
+ - 나뭇가지 
+ - 하나의 폴더를 다양한 상태로 나누는 것
+ - git repo -> switch to -> new branch : 새로운 branch 생성
+
+# Merge
+ - 다른 Branch에서 작업한 내용을 합치는 것
+ - 원하는 Branch로 Checkout한 후에 
+   Merge를 선택하고 합치려는 Branch를 선택한다
+ ex: master에 BranchA를 합치고 싶은 경우, 
+      master로 checkout한 후에 BranchA를 merge한다
+
+# fast-forward 
+	    ㅁ - ㅁ - ㅁ  BranchA
+	  /
+ ㅁ - ㅁ - ㅁ   main(master)
+	  \
+	    ㅁ - ㅁ BranchB  
+
+# main의 역사
+ ㅁ - ㅁ - ㅁ
+
+# BranchA의 역사
+	    ㅁ - ㅁ - ㅁ
+	  /
+ ㅁ - ㅁ - ㅁ
+
+ - main에 최신 BranchA를 합치기 위해서는 앞으로 빨리감기만 하면 된다
+ - 이러한 상태를 fast-forward라고 한다 
+
+
+# 두 번째 merge
+	  
+ ㅁ - ㅁ - ㅁ -  ㅁ  - ㅁ BranchA, BranchB, main(master)   
+	  \           /
+	    ㅁ - ㅁ 
+
+
+# Rebase
+
+ ㅁ - ㅁ - ㅁ - ㅁ - ㅁ main(master)
+                 \ 			
+  	   ㅁ - ㅁ BranchA
+
+	=> ㅁ - ㅁ - ㅁ - ㅁ - ㅁ main(master)
+                		    \ 			
+	  		     ㅁ - ㅁ BranchA
+
+# Github/rnjsgurwns
+

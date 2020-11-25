@@ -35,7 +35,6 @@ public class GenerateRandomCar {
 	
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/XEPDB1", "hr", "123");
-
 			String sql = "INSERT INTO random_car_table values (?, ?, ?)";
 			
 			PreparedStatement pstmt = conn.prepareStatement(sql);
