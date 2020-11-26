@@ -1,9 +1,11 @@
 package jdbc;
 
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Properties;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -34,9 +36,23 @@ public class HikariCptest {
       //Map, 딕셔너리, Property, Entry, JSON.. 데이터를 Key=Value형태로 다루는 것들
       
       //3.2 프로젝트 내부의 경로를 찾아갈 때 (/ or \\)
-      HikariConfig config = new HikariConfig("some/path/hikari.properties");
-      HikariDataSource ds = new HikariDataSource(config);
+//      HikariConfig config = new HikariConfig("some/path/hikari.properties"); 
+//      HikariDataSource ds = new HikariDataSource(config); 
 		
+		// 3. 3
+	      Properties props = new Properties();
+	      props.setProperty("JdbcUrl", "jdbc:oracle:thin:@localhost:1521/XEPDB1");
+	      props.setProperty("dataSource.user", "hr");
+	      props.setProperty("dataSource.password", "123");
+	      props.setProperty("dataSource.databaseName", "XEPDB1");
+	      props.put("dataSource.logWriter", new PrintWriter(System.out));
+
+	      HikariConfig config = new HikariConfig(props);
+	      HikariDataSource ds = new HikariDataSource(config);
+	      
+		
+		
+	
 		try {
 			Connection conn = ds.getConnection();
 			
