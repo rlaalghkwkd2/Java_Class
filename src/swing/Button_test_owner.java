@@ -27,10 +27,10 @@ public class Button_test_owner extends JFrame {
 		
 	
 			ImageIcon im01= 
-					new ImageIcon(ImageIO.read(new File("C:\\Users\\seunghwan\\Pictures\\Saved Pictures\\apple.jpg"))
+					new ImageIcon(ImageIO.read(new File("image/사과.jpg"))
 							.getScaledInstance(100, 100, Image.SCALE_SMOOTH));
 			ImageIcon im02 = 
-					new ImageIcon(ImageIO.read(new File("C:\\Users\\seunghwan\\Pictures\\Saved Pictures\\banana.jpg"))
+					new ImageIcon(ImageIO.read(new File("image/바나나.jpg"))
 							.getScaledInstance(100, 100, Image.SCALE_SMOOTH));
 
 			JLabel label01 = new JLabel(im01);
