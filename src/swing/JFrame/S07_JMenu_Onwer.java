@@ -43,7 +43,7 @@ public class S07_JMenu_Onwer extends JFrame {
 //                        
 //                });
 //        
-//        
+//       
 //                
 //                si1 = new JMenuItem("펭귄");
 //                si2 = new JMenuItem("코끼리");
@@ -69,15 +69,16 @@ public class S07_JMenu_Onwer extends JFrame {
                 center_panel.setLayout(new CardLayout(20, 20));
                 
                 for(PictureEnum picname : PictureEnum.values()) {
-                	center_panel.add(picname.toString(), new PictureLabel(picname));
+                	center_panel.add(picname.kName, new PictureLabel(picname));
                 	JMenuItem item = new JMenuItem(picname.kName);
                 	menu.add(item);
                 	
                 	item.addActionListener(new ShowCardAction(
                 			center_panel, 
                 			pic_label, 
-                			picname.kName));
+                			picname.kName)); // 카드이름
                 }
+                // 여기는 이해가지? 옹ㄴ데 이넘에서 벨루 하나씩이면 apple 나와 투스트링이면 영어가 나온다구 근데 키 네임을 하면 사과가 나와 바바
                      
                 
                 bar.add(menu);
@@ -88,7 +89,8 @@ public class S07_JMenu_Onwer extends JFrame {
         }        
         
         public static void main(String[] args) {
-                new S07_JMenu_Onwer();                
+                new S07_JMenu_Onwer();     
+                
         }
         
 }
