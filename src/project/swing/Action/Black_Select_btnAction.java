@@ -11,6 +11,7 @@ import javax.swing.JTextField;
 
 import project.controller.Custom_Controller;
 import project.controller.Custom_black_Controller;
+import project.swing_view.Custom_Black_Delete_View;
 import project.swing_view.Custom_Select_View;
 
 
@@ -22,7 +23,7 @@ public class Black_Select_btnAction implements ActionListener{
 	public Black_Select_btnAction(Container card_panel) {
 			this.card_panel = card_panel;
 	}
-
+ // ºí·¢ Á¶È¸
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
@@ -30,13 +31,12 @@ public class Black_Select_btnAction implements ActionListener{
 		ArrayList<String> custom_info = new ArrayList<String>();
 		ArrayList<String> custom_info_copy = new ArrayList<String>();
 		
-		this.tTitle =  Custom_Select_View.tTitle;
-		this.textarea = Custom_Select_View.textarea;
+		this.tTitle =  Custom_Black_Delete_View.tTitle;
+		this.textarea = Custom_Black_Delete_View.textarea;
 		
-		new Custom_black_Controller().Custom_black_select(tTitle.getText());
-		new Custom_Controller().Custom_Name_Select(tTitle.getText());
+		new Custom_black_Controller().black_select(tTitle.getText());
 		
-		Custom_Select_View.textarea.setText("");
+		Custom_Black_Delete_View.textarea.setText("");
 		text.add("[°í°´ ID]: ");
 		text.add("[°í°´ ÀÌ¸§]: ");
 		text.add("[°í°´ ³ªÀÌ]: ");
@@ -45,12 +45,14 @@ public class Black_Select_btnAction implements ActionListener{
 		text.add("[°í°´ ÀÌ¸ÞÀÏ]: ");
 		text.add("[°í°´ ÁÖ¼Ò]: ");
 		text.add("[°í°´ Ä«µå¹øÈ£]: ");
+		text.add("[»çÀ¯]: ");
+		text.add("[µî·ÏÀÏ]: ");
 		
-		for(int i = 0; i < Custom_Controller.mo.size(); i++) {
-			custom_info.add(text.get(i%8)+Custom_Controller.mo.get(i));
+		for(int i = 0; i < Custom_black_Controller.mo.size(); i++) {
+			custom_info.add(text.get(i%10)+Custom_black_Controller.mo.get(i));
 		}
 		for(int j = 0; j < custom_info.size(); j++) {	
-			if(j%8 == 0 && j != 0) {
+			if(j%10 == 0 && j != 0) {
 				textarea.append("¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\n");
 			}
 			tTitle.setText(custom_info.get(j));			
@@ -58,8 +60,8 @@ public class Black_Select_btnAction implements ActionListener{
 			textarea.append(stext + "\n");
 			tTitle.setText("");		
 	}
-		custom_info_copy.addAll(Custom_Controller.mo);
-		Custom_Controller.mo.removeAll(custom_info_copy);
+		custom_info_copy.addAll(Custom_black_Controller.mo);
+		Custom_black_Controller.mo.removeAll(custom_info_copy);
 		
 	}			
 }

@@ -39,7 +39,7 @@ public class Custom_Delete_View extends JFrame{
 
 		p1.setOpaque(false);
 		p1.setLayout(new FlowLayout());
-		p2.add(new JLabel("회원 삭제", JLabel.CENTER));
+		p2.add(new JLabel("회원 삭제<카드 번호>", JLabel.CENTER));
 	
 	
 		p1.add(tTitle);	
@@ -48,13 +48,13 @@ public class Custom_Delete_View extends JFrame{
 		
 		jp.add(btn);
 		jp.add(rebtn);
-		add(p2, BorderLayout.NORTH);	
-	
+		
+		add(p2, BorderLayout.NORTH);		
 		add(p1, BorderLayout.CENTER);
 		add(jp, BorderLayout.SOUTH);
 			
 		btn.addActionListener(new Delete_CardAction(p1)); // 삭제
-		sbtn.addActionListener(new Select_btnAction(p1));
+		sbtn.addActionListener(new Select_btnAction(p1, 2));
 		rebtn.addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {

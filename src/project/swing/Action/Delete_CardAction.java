@@ -13,7 +13,7 @@ public class Delete_CardAction implements ActionListener{
 	Container card_panel;
 	JTextField tTitle;
 	String card;
-	
+	 // 호ㅓㅣ원 삭제
 	public Delete_CardAction(Container card_panel) {
 		this.card_panel = card_panel;
 	}

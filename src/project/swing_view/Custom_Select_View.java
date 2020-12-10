@@ -24,6 +24,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import project.method.SwingTools_p;
 import project.swing.Action.Select_btnAction;
 import project.swing.Action.Select_textAction;
 import sun.launcher.resources.launcher;
@@ -34,10 +35,12 @@ public class Custom_Select_View extends JFrame {
 
 	public static JTextField tTitle = new JTextField(23);
 	public static JTextArea textarea = new JTextArea(10, 23);
-	JButton btn = new JButton("조회");
-	JButton rebtn = new JButton("취소");
 	
-	public void Custom_search_info() {		
+	
+	public void Custom_search_info() {	
+		JButton btn = new JButton("조회");
+		JButton rebtn = new JButton("취소");
+		
 		JPanel p1 = new JPanel();		
 		JPanel jp = new JPanel(new FlowLayout(FlowLayout.CENTER,0,0));		
 		tTitle.addActionListener(new Select_textAction(p1));
@@ -56,7 +59,7 @@ public class Custom_Select_View extends JFrame {
 		add(p1, BorderLayout.CENTER);		
 		add(jp, BorderLayout.SOUTH);
 		
-		btn.addActionListener(new Select_btnAction(p1));		
+		btn.addActionListener(new Select_btnAction(p1 , 0));		
 		rebtn.addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -65,10 +68,7 @@ public class Custom_Select_View extends JFrame {
 			}
 		}); 	
 
-		setSize(400, 350);
-		setLocation(900, 400);
-		setVisible(true);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		SwingTools_p.initTestFrame(this);
 	}
 
 	public static void main(String[] args) {
