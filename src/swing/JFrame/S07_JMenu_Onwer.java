@@ -67,16 +67,18 @@ public class S07_JMenu_Onwer extends JFrame {
                 JLabel pic_label = new JLabel("NO PICTURE");
 
                 center_panel.setLayout(new CardLayout(20, 20));
-                
-                for(PictureEnum picname : PictureEnum.values()) {
+                /// 이거는 이거 이넘에 있는걸 하나씩 꺼내! 그러고 패널이 카드 패널이니까
+                // 한 페널에 사진을 넣는거고 그 사진-이름 이 맞는걸로 뽑아주는거지
+                for(PictureEnum picname : PictureEnum.values()) { 
                 	center_panel.add(picname.kName, new PictureLabel(picname));
                 	JMenuItem item = new JMenuItem(picname.kName);
                 	menu.add(item);
-                	
+                	menu.addSeparator();
                 	item.addActionListener(new ShowCardAction(
                 			center_panel, 
                 			pic_label, 
                 			picname.kName)); // 카드이름
+                	menu.add(item);
                 }
                 // 여기는 이해가지? 옹ㄴ데 이넘에서 벨루 하나씩이면 apple 나와 투스트링이면 영어가 나온다구 근데 키 네임을 하면 사과가 나와 바바
                      

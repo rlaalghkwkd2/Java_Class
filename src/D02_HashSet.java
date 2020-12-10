@@ -34,7 +34,13 @@ public class D02_HashSet {
 	public static void main(String[] args) {
 		
 		HashSet<Integer> even = new HashSet();
+		HashSet<Integer> even1 = new HashSet();
 		
+		
+		for(int i = 0; i < 9; i++) {
+			int rn = (int) (Math.random() * 10);
+			even1.add(rn);
+		}
 		// Set에는 똑같은 데이터를 저장할 수 없다. 알아서 제거된다.
 		even.add(2);
 		even.add(2);
@@ -52,6 +58,7 @@ public class D02_HashSet {
 		
 		// Hash를 이용하는 클래스는 값이 넣었던 순서대로 보관되지 않는다.
 		System.out.println(even);
+		System.out.println(even1);
 		
 		// Hash은 index가 없기 때문에 하나만 꺼낼 수가 없다.
 		for (int i : even) {
@@ -78,6 +85,7 @@ public class D02_HashSet {
 		// 중복이 제거되는 효과가 있다.
 		Set<String> animal_set = new HashSet<>(animal_list);
 		System.out.println(animal_set);
+		
 	
 		// # 컬렉션을 배열로 변환하기 1
 		Object[] animal_arr = animal_list.toArray();

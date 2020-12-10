@@ -41,6 +41,8 @@ public class S04_Layout extends JFrame {
 			add(btns.get(2), BorderLayout.SOUTH);
 			add(btns.get(3), BorderLayout.NORTH);
 			add(btns.get(4), BorderLayout.CENTER);
+			//  add(패널, BorderLayout.SOUTH)
+			// 버튼 2번 온곳에 그 패널이 생기겠지~?
 			break;
 		case "grid":
 			// GridLayout
@@ -69,7 +71,7 @@ public class S04_Layout extends JFrame {
 			// # FlowLayout
 			// - 텍스트처럼 컴포넌트를 추가한다
 			// - 생성자에 전달하는 값: 정렬, 가로 간격, 세로 간격
-			setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
+			setLayout(new FlowLayout(FlowLayout.LEFT, 10, 0));
 
 			for (int i = 0; i < 10; i++) {
 				add(btns.get(i));
@@ -119,7 +121,7 @@ public class S04_Layout extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new S04_Layout("card");
+		new S04_Layout("flow");
 
 	}
 

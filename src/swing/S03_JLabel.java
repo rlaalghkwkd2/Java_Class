@@ -24,7 +24,7 @@ public class S03_JLabel extends JFrame{
 		
 		// JLabel : 텍스트, 그림등을 적을 수 잇는 컴포넌트
 		JLabel lavel01 = new JLabel("Hello, java gui!!");
-		JLabel label02 = new JLabel(new ImageIcon(ImageIO.read(new File("C:\\Users\\seunghwan\\Pictures\\Saved Pictures\\KakaoTalk_20201127_104414652.png")
+		JLabel label02 = new JLabel(new ImageIcon(ImageIO.read(new File("image/키위.jpg")
 				).getScaledInstance(100, 100, Image.SCALE_SMOOTH)
 				)
 				);
