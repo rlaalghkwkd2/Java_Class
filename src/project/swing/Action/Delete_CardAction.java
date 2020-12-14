@@ -23,6 +23,7 @@ public class Delete_CardAction implements ActionListener{
 	this.tTitle  = Custom_Delete_View.tTitle;
 	card = this.tTitle.getText();
 	new Custom_Deletes_Controller().Delete(card);		
+	System.out.println("회원 삭제 완료");
 	}
 	
 }

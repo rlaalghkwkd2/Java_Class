@@ -45,22 +45,22 @@ public class Custom_black_Controller{
 	      try {
 			Connection conn = ds.getConnection();
 			
-			String sql = "SELECT * FROM blacklist WHERE B_CARD = ?";
+			String sql = "SELECT * FROM blacklist WHERE card = ?";
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, card);			
 			ResultSet rs = pstmt.executeQuery();	
 				while(rs.next()) {
 					System.out.printf("고객Number%d\n이름:%s\n나이:%d\n성별:%s\n핸드폰:%s\n이메일:%s\n주소:%s\n카드번호:%s\n사유%s\n등록일%s",
-				this.id = rs.getInt("b_id"),
-				this.b_name = rs.getString("b_name"),
-				this.b_age = rs.getInt("b_age"),
-				this.b_gender = rs.getString("b_gender"),
-				this.b_phone = rs.getString("b_phone"),
-				this.b_email = rs.getString("b_email"),
-				this.b_addr = rs.getString("b_addr"),
-				this.b_card = rs.getString("b_card"),
-				this.b_reason = rs.getString("b_reason"),
-				this.b_registration = rs.getString("b_registration"),
+				this.id = rs.getInt("id"),
+				this.b_name = rs.getString("name"),
+				this.b_age = rs.getInt("age"),
+				this.b_gender = rs.getString("gender"),
+				this.b_phone = rs.getString("phone"),
+				this.b_email = rs.getString("email"),
+				this.b_addr = rs.getString("addr"),
+				this.b_card = rs.getString("card"),
+				this.b_reason = rs.getString("reason"),
+				this.b_registration = rs.getString("registration"),
 						this.mo.add(id.toString()),
 						this.mo.add(b_name),
 						this.mo.add(b_age.toString()),
@@ -143,7 +143,7 @@ public class Custom_black_Controller{
 			System.out.println("카드 번호로 블랙리스트 등록 완료");
 			pstmt.executeUpdate();
 			String black = "BLACK";
-			String sql2 = "UPDATE CUSTOM SET black_Whether = '" + black +"' WHERE C_CARD = ?";
+			String sql2 = "UPDATE CUSTOM SET black_Whether = '" + black +"' WHERE CARD = ?";
 			PreparedStatement pstmt2 = conn.prepareStatement(sql2);
 			pstmt2.setString(1, card);
 			System.out.println("회원 관리 저장소 BLACK 변환 완료");
@@ -172,13 +172,13 @@ public class Custom_black_Controller{
 	      try {
 			Connection conn = ds.getConnection();
 			String noblack = "No_Black";
-			String sql = "DELETE FROM blacklist WHERE B_CARD = ?";
+			String sql = "DELETE FROM blacklist WHERE CARD = ?";
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, card);		
 			System.out.println("카드 번호로 블랙리스트 해제  완료");
 			pstmt.executeUpdate();
 						
-			String sql2 = "UPDATE CUSTOM SET black_whether = '" + noblack + "' WHERE C_CARD = ?";
+			String sql2 = "UPDATE CUSTOM SET black_whether = '" + noblack + "' WHERE CARD = ?";
 			PreparedStatement pstmt2 = conn.prepareStatement(sql2);
 			pstmt2.setString(1, card);
 			System.out.println("회원 관리 저장소 NO_BLACK 변환 완료");

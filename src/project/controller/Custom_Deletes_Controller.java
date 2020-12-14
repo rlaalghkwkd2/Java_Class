@@ -27,13 +27,13 @@ public class Custom_Deletes_Controller {
 			Connection conn = ds.getConnection();
 			
 			
-			String sql3 = "DELETE FROM blacklist WHERE B_CARD = ?";
+			String sql3 = "DELETE FROM blacklist WHERE CARD = ?";
 			PreparedStatement pstmt3 = conn.prepareStatement(sql3);
 			pstmt3.setString(1, card);
 			System.out.println("블랙리스트 목록 삭제");
 			pstmt3.executeUpdate();
 			
-			  String sql ="DELETE FROM CUSTOM WHERE C_CARD = ?"; 		  
+			  String sql ="DELETE FROM CUSTOM WHERE CARD = ?"; 		  
 		      PreparedStatement pstmt = conn.prepareStatement(sql);
 		      pstmt.setString(1, card);
 		      System.out.println("고객 삭제");		      

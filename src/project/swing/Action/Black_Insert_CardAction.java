@@ -7,6 +7,7 @@ import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import project.controller.Custom_Controller;
@@ -28,7 +29,15 @@ public class Black_Insert_CardAction implements ActionListener{
 		card = this.tTitle.getText();
 		new Custom_Controller().Custom_Card_select(card);
 		new Custom_black_Controller().black_CardInsert(card);
+		System.out.println("블랙리스트 등록 완료");
 		
+		
+		Custom_Black_Input_View.reason.setText("");
+		Custom_Black_Input_View.tTitle.setText("");
+		Custom_Black_Input_View.textarea.setText("");
+		
+		
+		new JLabel("블랙리스트 정상 등록 완료!");
 		
 	}
 

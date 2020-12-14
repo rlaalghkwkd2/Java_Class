@@ -19,6 +19,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
+import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -43,7 +44,7 @@ public class Custom_Input_View extends JFrame implements ItemListener {
 	String splTel;
 	JButton inbtn = new JButton("등록");
 	JButton rebtn = new JButton("취소");
-
+	ButtonGroup bg = new ButtonGroup();
 	public void Coustm_Input() throws IOException {
 
 		Container c = this.getContentPane();
@@ -76,12 +77,16 @@ public class Custom_Input_View extends JFrame implements ItemListener {
 			}
 			sgender[i].addItemListener(this);
 		}
+		
+		
+		bg.add(sgender[0]);
+		bg.add(sgender[1]);
 
 		setTitle("ABC마트 회원 등록");
 		title.setBounds(0, 0, 400, 30);
 		name.setBounds(10, 40, 50, 20);
 		age.setBounds(10, 80, 50, 20);
-		age1.setBounds(80, 90, 50, 20);
+		age1.setBounds(75, 80, 50, 20);
 		gender.setBounds(10, 120, 50, 20);
 		email.setBounds(10, 160, 50, 20);
 		tel.setBounds(10, 200, 50, 20);

@@ -17,12 +17,14 @@ import project.swing_view.Custom_Black_Delete_View;
 import project.swing_view.Custom_Black_Input_View;
 import project.swing_view.Custom_Delete_View;
 import project.swing_view.Custom_Select_View;
+import project.swing_view.test;
+import project.swing_view.test2;
 
 
 public class Select_btnAction implements ActionListener{
 
 	Container card_panel;
-	JTextField tTitle;
+    JTextField tTitle;
 	JTextArea textarea;
 	int number;
 	
@@ -46,16 +48,15 @@ public class Select_btnAction implements ActionListener{
 		}else if(number == 2) {
 		this.tTitle = Custom_Delete_View.tTitle;
 		this.textarea = Custom_Delete_View.textarea;
-		}	
+		System.out.println("Á¶È¸" +tTitle.getText());
+		}
+				
 		new Custom_Controller().Custom_Card_select(tTitle.getText());
-		new Custom_Controller().Custom_Name_Select(tTitle.getText());
+		new Custom_Controller().Custom_Name_Select(tTitle.getText());		
 		
 		
 		
-		Custom_Select_View.textarea.setText("");
-		
-		
-		
+		Custom_Select_View.textarea.setText("");		
 		text.add("[°í°´ ID]: ");
 		text.add("[°í°´ ÀÌ¸§]: ");
 		text.add("[°í°´ ³ªÀÌ]: ");
