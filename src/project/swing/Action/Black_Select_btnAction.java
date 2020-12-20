@@ -2,6 +2,7 @@ package project.swing.Action;
 
 import java.awt.Container;
 
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -9,7 +10,6 @@ import java.util.ArrayList;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import project.controller.Custom_Controller;
 import project.controller.Custom_black_Controller;
 import project.swing_view.Custom_Black_Delete_View;
 import project.swing_view.Custom_Select_View;
@@ -34,8 +34,7 @@ public class Black_Select_btnAction implements ActionListener{
 		this.tTitle =  Custom_Black_Delete_View.tTitle;
 		this.textarea = Custom_Black_Delete_View.textarea;
 		
-		new Custom_black_Controller().black_select(tTitle.getText());
-		
+		new Custom_black_Controller().black_select(tTitle.getText());		
 		Custom_Black_Delete_View.textarea.setText("");
 		text.add("[고객 ID]: ");
 		text.add("[고객 이름]: ");
@@ -47,6 +46,8 @@ public class Black_Select_btnAction implements ActionListener{
 		text.add("[고객 카드번호]: ");
 		text.add("[사유]: ");
 		text.add("[등록일]: ");
+		
+		
 		
 		for(int i = 0; i < Custom_black_Controller.mo.size(); i++) {
 			custom_info.add(text.get(i%10)+Custom_black_Controller.mo.get(i));

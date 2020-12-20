@@ -121,7 +121,7 @@ public class S04_Layout extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new S04_Layout("flow");
+		new S04_Layout("border");
 
 	}
 

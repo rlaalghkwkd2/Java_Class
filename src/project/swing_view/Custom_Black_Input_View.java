@@ -35,9 +35,9 @@ public class Custom_Black_Input_View extends JFrame{
 		JPanel p1 = new JPanel();
 		JPanel p2 = new JPanel();
 	JLabel j1 = new JLabel("블랙 사유: ");
-	j1.setBounds(0, 50, 100, 430);
-	reason.setBounds(65, 255, 255, 20);	
-		
+	j1.setBounds(10, 50, 100, 430);
+	reason.setBounds(89, 255, 255, 20);	
+	textarea.setEditable(false);
 		JPanel jp = new JPanel(new FlowLayout(FlowLayout.CENTER,0,0));
 		
 //		tTitle.addActionListener(new Black_Insert_CardAction(p1));

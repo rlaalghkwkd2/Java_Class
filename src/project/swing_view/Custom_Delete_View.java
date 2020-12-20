@@ -31,7 +31,7 @@ public class Custom_Delete_View extends JFrame{
 		JButton rebtn = new JButton("√Îº“");
 		JPanel p1 = new JPanel();
 		JPanel p2 = new JPanel();
-		
+		textarea.setEditable(false);
 		
 		JPanel jp = new JPanel(new FlowLayout(FlowLayout.CENTER,0,0));
 	

@@ -18,7 +18,7 @@ public class Main_class extends JFrame{
 
 public Main_class() {
 	
-	
+	JLabel la = new JLabel("야");
 		JButton b1 = new JButton("회원 등록");
 		JButton b2 = new JButton("회원 삭제");
 		JButton b3 = new JButton("회원 조회");
@@ -33,6 +33,9 @@ public Main_class() {
 		add(b5);
 		
 		setLayout(new FlowLayout(FlowLayout.LEFT,10,0));
+		
+		la.setBounds(0, 0, 400, 300);
+		add(la);
 		
 		b2.addActionListener(new ActionListener() {
 			

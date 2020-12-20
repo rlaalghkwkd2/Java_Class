@@ -24,6 +24,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import project.controller.Custom_Select_Controller;
 import project.method.SwingTools_p;
 import project.swing.Action.Select_btnAction;
 import project.swing.Action.Select_textAction;
@@ -40,11 +41,11 @@ public class Custom_Select_View extends JFrame {
 	public void Custom_search_info() {	
 		JButton btn = new JButton("조회");
 		JButton rebtn = new JButton("취소");
-		
+		textarea.setEditable(false);
 		JPanel p1 = new JPanel();		
 		JPanel jp = new JPanel(new FlowLayout(FlowLayout.CENTER,0,0));		
 		tTitle.addActionListener(new Select_textAction(p1));
-				
+				new Custom_Select_Controller().Custom_Card_select(tTitle.getText());
 		setTitle("회원정보 조회");
 		p1.setOpaque(false);
 		p1.setLayout(new FlowLayout());		
@@ -67,7 +68,7 @@ public class Custom_Select_View extends JFrame {
 				
 			}
 		}); 	
-
+		
 		SwingTools_p.initTestFrame(this);
 	}
 

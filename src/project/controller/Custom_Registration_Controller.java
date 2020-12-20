@@ -4,6 +4,7 @@ import java.io.PrintWriter;
 
 
 
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -18,24 +19,24 @@ import project.method.Create_card;
 import project.swing_view.Custom_Input_View;
 
 
-public class Custom_Insert_Create_Table {
+public class Custom_Registration_Controller {
 	Create_card cards = new Create_card();
-	Custom_Input_View custom = new Custom_Input_View();
-	String name;
-	int age;
-	String gender;
-	String email;
-	String tel;
-	String addr;
-	String card;
-	String black;
 	
-public void Custom_insert_create_table_info(String name, int age, String gender, String email, String tel, String addr) {
+	public static String name;
+	public static int age;
+	public static String gender;
+	public static String email;
+	public static String phone;
+	public static String addr;
+	public static String card;
+	public static String black;
+	
+public void Custom_insert_create_table_info(String name, int age, String gender,String phone, String email,  String addr) {
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
 		this.email = email;
-		this.tel = tel;
+		this.phone = phone;
 		this.addr = addr;
 		this.card = cards.inputCard();
 	 
@@ -57,10 +58,9 @@ public void Custom_insert_create_table_info(String name, int age, String gender,
 			pstmt.setString(1,this.name);
 			pstmt.setInt(2, this.age);
 			pstmt.setString(3, this.gender);
-			pstmt.setString(4, this.tel);
+			pstmt.setString(4, this.phone);
 			pstmt.setString(5, this.email);
 			pstmt.setString(6, this.addr);
-			pstmt.setString(7, this.card);
 			pstmt.setString(7, this.card);
 			pstmt.setString(8, "No_Black");
 			flag = true;
@@ -73,7 +73,7 @@ public void Custom_insert_create_table_info(String name, int age, String gender,
 			+"SH_COUNT NUMBER(3),"
 			+"sh_size NUMBER(3),"
 			+"sh_price number(10),"
-			+"Purchase_day DATE,"
+			+"Purchase_day varchar(30),"
 			+"current_point NUMBER (20) not null)";
 			
 //			+" CONSTRAINT Purchaseday_nn"+this.card+" NOT NULL,"
@@ -81,8 +81,13 @@ public void Custom_insert_create_table_info(String name, int age, String gender,
 			System.out.println("회원 정보 저장소 생성");
 			pstmt2.executeUpdate();
 						
+			String sql3 = "commit";
+			PreparedStatement pstmt3 = conn.prepareStatement(sql3);
+			pstmt3.executeUpdate();
+			
 			if(pstmt != null) pstmt.close();
 			if(pstmt2 != null) pstmt.close();
+			if(pstmt3 != null) pstmt.close();
 			if(conn != null) conn.close();
 	}catch (SQLException e) {
 		e.printStackTrace();

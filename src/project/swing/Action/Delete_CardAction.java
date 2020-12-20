@@ -21,8 +21,9 @@ public class Delete_CardAction implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 	this.tTitle  = Custom_Delete_View.tTitle;
+	System.out.println(tTitle);
 	card = this.tTitle.getText();
-	new Custom_Deletes_Controller().Delete(card);		
+	new Custom_Deletes_Controller().Delete(card);
 	System.out.println("회원 삭제 완료");
 	}
 	

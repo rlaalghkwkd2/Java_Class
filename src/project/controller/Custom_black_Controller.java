@@ -14,6 +14,7 @@ import java.util.TimeZone;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
+import project.swing_view.Custom_Black_Delete_View;
 import project.swing_view.Custom_Black_Input_View;
 
 public class Custom_black_Controller{
@@ -60,7 +61,7 @@ public class Custom_black_Controller{
 				this.b_addr = rs.getString("addr"),
 				this.b_card = rs.getString("card"),
 				this.b_reason = rs.getString("reason"),
-				this.b_registration = rs.getString("registration"),
+				this.b_registration = rs.getString("Registration_day"),
 						this.mo.add(id.toString()),
 						this.mo.add(b_name),
 						this.mo.add(b_age.toString()),
@@ -70,10 +71,14 @@ public class Custom_black_Controller{
 						this.mo.add(b_addr),
 						this.mo.add(b_card)	,
 						this.mo.add(b_reason),
-						this.mo.add(b_registration)	
+						this.mo.add(b_registration)					
 					);
+					
+					
 					System.out.println(mo);
 			}
+				
+				
 				if(rs != null) 
 					rs.close();				
 				if(pstmt != null) 
@@ -129,14 +134,14 @@ public class Custom_black_Controller{
 	    	  Connection conn = ds.getConnection();
 			String sql = "INSERT INTO blacklist values (?,?,?,?,?,?,?,?,?,?)";
 			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, Custom_Controller.id);
-			pstmt.setString(2, Custom_Controller.c_name);
-			pstmt.setInt(3, Custom_Controller.c_age);
-			pstmt.setString(4, Custom_Controller.c_gender);
-			pstmt.setString(5, Custom_Controller.c_phone);
-			pstmt.setString(6, Custom_Controller.c_email);
-			pstmt.setString(7, Custom_Controller.c_addr);
-			pstmt.setString(8, Custom_Controller.c_card);
+			pstmt.setInt(1, Custom_Select_Controller.id);
+			pstmt.setString(2, Custom_Select_Controller.c_name);
+			pstmt.setInt(3, Custom_Select_Controller.c_age);
+			pstmt.setString(4, Custom_Select_Controller.c_gender);
+			pstmt.setString(5, Custom_Select_Controller.c_phone);
+			pstmt.setString(6, Custom_Select_Controller.c_email);
+			pstmt.setString(7, Custom_Select_Controller.c_addr);
+			pstmt.setString(8, Custom_Select_Controller.c_card);
 			pstmt.setString(9, Custom_Black_Input_View.reason.getText());
 			pstmt.setString(10, getDate());
 			

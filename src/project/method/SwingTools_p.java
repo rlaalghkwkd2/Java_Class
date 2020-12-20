@@ -8,7 +8,7 @@ public class SwingTools_p {
 		
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(400, 350);
+		frame.setSize(450, 350);
 		frame.setLocation(700, 350);
 		frame.setVisible(true);
 		

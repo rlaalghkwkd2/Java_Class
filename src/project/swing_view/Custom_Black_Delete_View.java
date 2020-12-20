@@ -31,7 +31,7 @@ public class Custom_Black_Delete_View extends JFrame{
 		JButton rebtn = new JButton("취소");
 		JPanel p1 = new JPanel();
 		JPanel p2 = new JPanel();
-		
+		textarea.setEditable(false);
 		JPanel jp = new JPanel(new FlowLayout(FlowLayout.CENTER,0,0));
 		setTitle("블랙리스트 해제");
 
