@@ -134,7 +134,7 @@ public class Frame01 extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				menuClicked(panelCustomCheck);
-				panelCustomCheck.tTitle.setText("");
+				panelCustomCheck.textCardSearch.setText("");
 				for (int i = panelCustomCheck.dtm.getRowCount() - 1; i >= 0; i--) {
 					panelCustomCheck.dtm.removeRow(i);
 
@@ -176,7 +176,7 @@ public class Frame01 extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				menuClicked(panelCustomDelete);
-				panelCustomDelete.textSearch.setText("");
+				
 			}
 		});
 		panelCustomDeletes.setLayout(null);

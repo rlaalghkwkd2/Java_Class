@@ -41,9 +41,7 @@ public class panelCustomDelete extends JPanel {
 
 	public panelCustomDelete() {
 		
-		
-		
-		
+	
 		setBackground(new Color(255, 160, 122));
 		setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		setBounds(0, 0, 807, 533);

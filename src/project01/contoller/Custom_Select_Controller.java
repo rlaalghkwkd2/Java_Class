@@ -24,7 +24,7 @@ public class Custom_Select_Controller {
 	public static String c_addr;	
 	public static String c_card;	
 	public static String black_Whether;
-;	
+	
 	public static ArrayList<String> dataSize = new ArrayList<String>();
 	public static ArrayList<String> mo = new ArrayList<String>();
 

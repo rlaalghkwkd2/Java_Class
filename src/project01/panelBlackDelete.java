@@ -1,6 +1,7 @@
 package project01;
 
 import javax.swing.JPanel;
+
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JLabel;
@@ -31,46 +32,37 @@ import java.awt.Font;
 import java.awt.Image;
 
 import javax.swing.JTextArea;
+import javax.swing.Icon;
 
 public class panelBlackDelete extends JPanel {
 	private Image img_logo = new ImageIcon(Frame01.class.getResource("res/search.jpg")).getImage().getScaledInstance(65,
 			26, Image.SCALE_SMOOTH);
-	
-	
+
 	static Vector<String> columnNames = new Vector<String>(
 			Arrays.asList("번호", "이름", "나이", "성별", "핸드폰", "이메일", "주소", "카드번호", "블랙사유", "등록일"));
-	
+
 	public static DefaultTableModel dtm = new DefaultTableModel(columnNames, 0);
 	JTable table = new JTable(dtm);
 	Vector rowData;
 
 	JPanel panelTtile = new JPanel();
 	JLabel lblTitle = new JLabel("\uBE14\uB799\uD68C\uC6D0 \uD574\uC81C");
+	JTextField textSearch = new JTextField();
 
-	  JTextField textSearch = new JTextField();
-	
-
-	
 	public panelBlackDelete() {
-		
-		
 
 		setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		setBounds(0, 0, 807, 533);
 		setLayout(null);
 		setBackground(new Color(255, 160, 122));
-		
-		
 
 		JScrollPane scrollpane = new JScrollPane();
 		scrollpane.setBounds(12, 158, 783, 332);
 		add(scrollpane);
 		scrollpane.setViewportView(table);
-		
-	
+
 		textSearch.setBounds(12, 122, 250, 26);
-		
-	
+
 		textSearch.addActionListener(new Panel_BlackDelete_SelectAction(this, rowData, textSearch, table));
 		add(textSearch);
 
@@ -93,26 +85,27 @@ public class panelBlackDelete extends JPanel {
 
 		
 		
-		
 		JButton btnDelete = new JButton("\uC0AD\uC81C");
 		btnDelete.setFont(new Font("맑은 고딕 Semilight", Font.PLAIN, 15));
 		btnDelete.setBounds(730, 500, 65, 26);
 		add(btnDelete);
 		table.setFont(new Font("맑은 고딕 Semilight", Font.PLAIN, 13));
-		btnDelete.addActionListener(new ActionListener() {			
+		btnDelete.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				new Custom_BlackDelete_Contoller().BlackDelte(textSearch.getText());
+				
 				ShowTable();
-			
+				textSearch.setText("");
+
 			}
 		});
-		
-		
+
 		ShowTable();
-		
-		
+
 		table.setCellSelectionEnabled(true);
+		
+		
 		ListSelectionModel select = table.getSelectionModel();
 		select.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 	}

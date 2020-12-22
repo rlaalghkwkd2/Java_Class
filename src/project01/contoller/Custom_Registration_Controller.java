@@ -68,13 +68,20 @@ public void Custom_insert_create_table_info(String name, int age, String gender,
 			
 			pstmt.executeUpdate();
 						
+			
+		
+			
+			
 			String sql2 = "CREATE TABLE ABC"+ this.card			
-			+" (sh_name varchar(40),"
+			+" (SALES_NUMBER NUMBER(4),"
+			+"SH_NAME VARCHAR2(40),"
 			+"SH_COUNT NUMBER(3),"
-			+"sh_size NUMBER(3),"
-			+"sh_price number(10),"
+			+"SH_SIZE NUMBER(3),"
+			+"SH_PRICE NUMBER(8),"
 			+"Purchase_day varchar(30),"
-			+"current_point NUMBER (20) not null)";
+			+"CURRENT_POINT NUMBER(8) DEFAULT 0,"
+			+"shoes_serial_number NUMBER(7),"
+			+"SH_ID NUMBER(3))";
 			
 //			+" CONSTRAINT Purchaseday_nn"+this.card+" NOT NULL,"
 			PreparedStatement pstmt2 = conn.prepareStatement(sql2);

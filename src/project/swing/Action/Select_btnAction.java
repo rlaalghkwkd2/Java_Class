@@ -54,7 +54,7 @@ public class Select_btnAction implements ActionListener{
 		Custom_Delete_View.textarea.setText("");
 		System.out.println("Á¶È¸" +tTitle.getText());
 		}else if(number == 3) {
-			this.tTitle = panelCustomCheck.tTitle;
+			this.tTitle = panelCustomCheck.textCardSearch;
 		}
 				
 		new Custom_Select_Controller().Custom_Card_select(tTitle.getText());

@@ -10,7 +10,7 @@ import javax.swing.table.DefaultTableModel;
 import com.sun.rowset.internal.Row;
 
 import project.swing.Action.Select_btnAction;
-import project01.Action.Panel_Check_Action;
+import project01.Action.Panel_Check__Card_Action;
 import project01.contoller.CustomTable_Select_Controller;
 import project01.contoller.Custom_Select_Controller;
 
@@ -30,18 +30,20 @@ import javax.swing.border.LineBorder;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
+import javax.swing.Icon;
 
 public class panelCustomCheck extends JPanel {
 	
 	private Image img_logo = new ImageIcon(Frame01.class.getResource("res/search.jpg")).getImage().getScaledInstance(65,
 			26, Image.SCALE_SMOOTH);
-	public static JTextField tTitle = new JTextField(20);  
 	
 	public static Vector<String> columnNames = new Vector<String>(
-			Arrays.asList("신발이름", "신발재고", "신발사이즈", "신발가격", "신발구매일", "포인트잔액"));
+			Arrays.asList("결제번호", "신발이름", "신발재고", "신발사이즈", "신발가격", "신발구매일", "포인트 잔액", "신발 시리얼번호", "신발ID"));
 	public static DefaultTableModel dtm = new DefaultTableModel(columnNames, 0);
 	public static JTable table = new JTable(dtm);
 	Vector rowData;
+	public static JTextField textCardSearch = new JTextField(20);  
+	public static JTextField textNameSearch = new JTextField(20);
 
 	public panelCustomCheck() {
 		ListSelectionModel select = table.getSelectionModel();
@@ -62,22 +64,22 @@ public class panelCustomCheck extends JPanel {
 		setLayout(null);
 
 		
-		tTitle.setBounds(12, 122, 250, 26);
-		add(tTitle);
+		textCardSearch.setBounds(69, 122, 250, 26);
+		add(textCardSearch);
 
-		JButton btnNewButton = new JButton(new ImageIcon(img_logo));
-		btnNewButton.setFont(new Font("맑은 고딕 Semilight", Font.PLAIN, 15));
-		btnNewButton.setBounds(274, 121, 65, 26);
-		add(btnNewButton);
+		JButton btnCardSearch = new JButton(new ImageIcon(img_logo));
+		btnCardSearch.setFont(new Font("맑은 고딕 Semilight", Font.PLAIN, 15));
+		btnCardSearch.setBounds(331, 122, 35, 26);
+		add(btnCardSearch);
 
 		JScrollPane scrollPane =new JScrollPane();
 		scrollPane.setBounds(12, 158, 783, 363);
 		add(scrollPane);
 		table.setEnabled(false);
 		scrollPane.setViewportView(table);
-
-		btnNewButton.addActionListener(new Panel_Check_Action(this, rowData));
-		tTitle.addActionListener(new Panel_Check_Action(this, rowData));
+		
+		btnCardSearch.addActionListener(new Panel_Check__Card_Action(this, rowData));
+		textCardSearch.addActionListener(new Panel_Check__Card_Action(this, rowData));
 		
 		JPanel panelTitle = new JPanel();
 		panelTitle.setBackground(new Color(255, 245, 238));
@@ -90,5 +92,33 @@ public class panelCustomCheck extends JPanel {
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(12, 10, 779, 49);
 		panelTitle.add(lblNewLabel);
+		
+		
+		textNameSearch.setBounds(468, 122, 250, 26);
+		add(textNameSearch);
+		
+		JButton btnNameSearch = new JButton(new ImageIcon(img_logo));
+		btnNameSearch.setFont(new Font("맑은 고딕 Semilight", Font.PLAIN, 15));
+		btnNameSearch.setBounds(730, 122, 35, 26);
+		add(btnNameSearch);
+		
+		btnNameSearch.addActionListener(arg0);
+		
+		
+		JLabel lblnameSearch = new JLabel("\uACB0\uC81C\uBC88\uD638:");
+		lblnameSearch.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
+		lblnameSearch.setBounds(409, 123, 57, 26);
+		add(lblnameSearch);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("\uCE74\uB4DC\uBC88\uD638:");
+		lblNewLabel_1_1.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
+		lblNewLabel_1_1.setBounds(12, 123, 57, 26);
+		add(lblNewLabel_1_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("\u203B\uCE74\uB4DC\uBC88\uD638\uB85C \uBA3C\uC800 \uC0C1\uD488\uC744 \uC870\uD68C\uD574\uC8FC\uC2DC\uAE30\uBC14\uB78D\uB2C8\uB2E4.");
+		lblNewLabel_2.setFont(new Font("휴먼편지체", Font.PLAIN, 13));
+		lblNewLabel_2.setForeground(new Color(255, 0, 0));
+		lblNewLabel_2.setBounds(12, 81, 278, 20);
+		add(lblNewLabel_2);
 	}
 }

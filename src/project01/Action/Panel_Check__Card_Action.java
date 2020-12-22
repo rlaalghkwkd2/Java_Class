@@ -18,12 +18,12 @@ import project01.panelCustomCheck;
 import project01.contoller.CustomTable_Select_Controller;
 import project01.contoller.Custom_Select_Controller;
 
-public class Panel_Check_Action implements ActionListener {
+public class Panel_Check__Card_Action implements ActionListener {
 
 	Container card_panel;
 	JTextField tTitle;
 	Vector rowData;
-	public Panel_Check_Action(Container card_panel, Vector rowData) {
+	public Panel_Check__Card_Action(Container card_panel, Vector rowData) {
 		this.card_panel = card_panel;
 		this.rowData = rowData;
 	}
@@ -32,7 +32,7 @@ public class Panel_Check_Action implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		ArrayList<String> custom_info = new ArrayList<String>();
 		ArrayList<String> custom_info_copy = new ArrayList<String>();
-		this.tTitle = panelCustomCheck.tTitle;
+		this.tTitle = panelCustomCheck.textCardSearch;
 		new CustomTable_Select_Controller().ShowCustom(tTitle.getText());
 
 		for (int i = 0; i < CustomTable_Select_Controller.mo.size(); i++) {
@@ -43,6 +43,7 @@ public class Panel_Check_Action implements ActionListener {
 		System.out.println("카드" + CustomTable_Select_Controller.name + "이름" + CustomTable_Select_Controller.count);
 		System.out.println("사이즈" +custom_info);
 			
+				
 			for(int i = panelCustomCheck.dtm.getRowCount() -1; i>=0; i--) {
 				panelCustomCheck.dtm.removeRow(i);
 			}
@@ -62,8 +63,14 @@ public class Panel_Check_Action implements ActionListener {
 			i++;
 			rowData.add(CustomTable_Select_Controller.mo.get(i));
 			i++;
+			rowData.add(CustomTable_Select_Controller.mo.get(i));
+			i++;
+			rowData.add(CustomTable_Select_Controller.mo.get(i));
+			i++;
+			rowData.add(CustomTable_Select_Controller.mo.get(i));
+			i++;
 			
-			if(i != 0 && i%6 == 0) {
+			if(i != 0 && i%9 == 0) {
 				panelCustomCheck.dtm.addRow(rowData);
 				rowData = new Vector();
 				continue;
@@ -75,6 +82,8 @@ public class Panel_Check_Action implements ActionListener {
 	
 		custom_info_copy.addAll(CustomTable_Select_Controller.mo);
 		CustomTable_Select_Controller.mo.removeAll(custom_info_copy);
+		panelCustomCheck.textCardSearch.setText("");
+		panelCustomCheck.textNameSearch.setText("");
 
 		
 	}

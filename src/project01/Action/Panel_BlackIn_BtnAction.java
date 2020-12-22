@@ -16,6 +16,7 @@ import project.swing_view.Custom_Black_Input_View;
 import project01.panelBlackIn;
 import project01.contoller.Black_Controller;
 import project01.contoller.Custom_Select_Controller;
+import project01.contoller.Custom_Select_Use_Black_Controller;
 
 
 
@@ -40,7 +41,8 @@ public class Panel_BlackIn_BtnAction implements ActionListener{
 		this.textarea = panelBlackIn.textArea;
 		card = this.tTitle.getText();
 		
-		new Custom_Select_Controller().Custom_Card_select(card);
+//		new Custom_Select_Controller().Custom_Card_select(card);
+		new Custom_Select_Use_Black_Controller().Custom_Card_Select(card);
 		new Black_Controller().Black_CardInsert(card);
 		new Black_Controller().BlackCard_Select(card);
 		
@@ -54,7 +56,7 @@ public class Panel_BlackIn_BtnAction implements ActionListener{
 		text.add("[고객 이메일]: ");
 		text.add("[고객 주소]: ");
 		text.add("[고객 카드번호]: ");
-		text.add("[사유]: ");
+		text.add("[등록사유]: ");
 		text.add("[등록일]: ");
 		
 		for(int i = 0; i < Black_Controller.mo.size(); i++) {

@@ -15,6 +15,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 import project01.Action.Panel_Search_Action;
+import project01.contoller.Black_Controller;
 import project01.contoller.CustomTable_Select_Controller;
 import project01.contoller.Custom_Select_Controller;
 
@@ -113,7 +114,6 @@ public class panelSearch extends JPanel {
 		for (int i = dtm.getRowCount() - 1; i >= 0; i--) {
 			dtm.removeRow(i);
 		}
-
 		rowData = new Vector();
 		for (int i = 0; i < Custom_Select_Controller.mo.size();) {
 			rowData.add(Custom_Select_Controller.mo.get(i));
