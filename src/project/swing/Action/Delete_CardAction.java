@@ -6,8 +6,8 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JTextField;
 
-import project.controller.Custom_Deletes_Controller;
 import project.swing_view.Custom_Delete_View;
+import project01.contoller.Custom_Deletes_Controller;
 
 public class Delete_CardAction implements ActionListener{
 	Container card_panel;

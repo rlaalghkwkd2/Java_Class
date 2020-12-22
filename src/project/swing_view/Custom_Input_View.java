@@ -34,8 +34,8 @@ import javax.swing.JTextField;
 
 import com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory.Default;
 
-import project.controller.Custom_Registration_Controller;
 import project.method.SwingTools_p;
+import project01.contoller.Custom_Registration_Controller;
 import swing.SwingTools;
 
 public class Custom_Input_View extends JFrame implements ItemListener {

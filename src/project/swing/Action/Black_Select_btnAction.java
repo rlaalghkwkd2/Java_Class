@@ -52,10 +52,7 @@ public class Black_Select_btnAction implements ActionListener{
 		for(int i = 0; i < Custom_black_Controller.mo.size(); i++) {
 			custom_info.add(text.get(i%10)+Custom_black_Controller.mo.get(i));
 		}
-		for(int j = 0; j < custom_info.size(); j++) {	
-			if(j%10 == 0 && j != 0) {
-				textarea.append("式式式式式式式式式式式式式式式式式式式式\n");
-			}
+		for(int j = 0; j < custom_info.size(); j++) {
 			tTitle.setText(custom_info.get(j));			
 			String stext = tTitle.getText();
 			textarea.append(stext + "\n");

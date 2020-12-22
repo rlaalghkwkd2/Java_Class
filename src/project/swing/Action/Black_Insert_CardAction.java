@@ -11,10 +11,10 @@ import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-import project.controller.Custom_Select_Controller;
 import project.controller.Custom_black_Controller;
 import project.swing_view.Custom_Black_Input_View;
-import text.panelBlackIn;
+import project01.panelBlackIn;
+import project01.contoller.Custom_Select_Controller;
 
 public class Black_Insert_CardAction implements ActionListener{
 	

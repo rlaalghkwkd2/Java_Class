@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JTextField;
 
-import project.controller.Custom_Registration_Controller;
+import project01.contoller.Custom_Registration_Controller;
 
 public class Custom_InsertAction implements ActionListener{
 

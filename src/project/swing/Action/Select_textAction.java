@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import project.controller.Custom_Select_Controller;
 import project.swing_view.Custom_Select_View;
+import project01.contoller.Custom_Select_Controller;
 
 public class Select_textAction implements ActionListener{
 	JTextField tTitle;

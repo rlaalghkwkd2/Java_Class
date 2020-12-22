@@ -16,8 +16,8 @@ import javax.swing.JTextField;
 import project.method.SwingTools_p;
 import project.swing.Action.Black_Insert_CardAction;
 import project.swing.Action.Black_Select_btnAction;
-import project.swing.Action.Black_deleteAction;
 import project.swing.Action.Select_btnAction;
+import project01.Action.Black_deleteAction;
 
 public class Custom_Black_Delete_View extends JFrame{
 
