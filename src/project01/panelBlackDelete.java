@@ -2,12 +2,12 @@ package project01;
 
 import javax.swing.JPanel;
 
+
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-import project.controller.Custom_black_Controller;
 import project01.Action.Panel_BlackDelete_SelectAction;
 import project01.contoller.Black_Controller;
 import project01.contoller.Custom_BlackDelete_Contoller;
@@ -33,6 +33,7 @@ import java.awt.Image;
 
 import javax.swing.JTextArea;
 import javax.swing.Icon;
+
 
 public class panelBlackDelete extends JPanel {
 	private Image img_logo = new ImageIcon(Frame01.class.getResource("res/search.jpg")).getImage().getScaledInstance(65,

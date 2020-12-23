@@ -1,6 +1,8 @@
 package project01.Action;
 
 import java.awt.Color;
+
+
 import java.awt.Container;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -11,8 +13,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import project.controller.Custom_black_Controller;
-import project.swing_view.Custom_Black_Input_View;
+
+
 import project01.panelBlackIn;
 import project01.contoller.Black_Controller;
 import project01.contoller.Custom_Select_Controller;

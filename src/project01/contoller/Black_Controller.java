@@ -1,6 +1,7 @@
 package project01.contoller;
 
 import java.io.PrintWriter;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,7 +14,6 @@ import java.util.TimeZone;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
-import project.swing_view.Custom_Black_Input_View;
 import project01.panelBlackIn;
 
 public class Black_Controller {

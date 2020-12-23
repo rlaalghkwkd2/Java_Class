@@ -1,6 +1,8 @@
 package project01;
 
 import javax.swing.JPanel;
+
+
 import javax.swing.JSlider;
 import javax.imageio.ImageIO;
 import javax.swing.ButtonGroup;
@@ -25,8 +27,7 @@ import org.json.simple.parser.Yytoken;
 
 import com.sun.javafx.embed.swing.Disposer;
 
-import project.swing_view.Custom_Black_Input_View;
-import project01.Action.Black_deleteAction;
+
 import project01.Action.ComboBoxInput_Action;
 import project01.contoller.Custom_Registration_Controller;
 

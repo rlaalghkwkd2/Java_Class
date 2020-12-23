@@ -1,6 +1,7 @@
 package project01.Action;
 
 import java.awt.Container;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -12,8 +13,6 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 import com.sun.org.apache.xml.internal.security.Init;
-
-import project.swing_view.Custom_Select_View;
 import project01.panelCustomCheck;
 import project01.contoller.CustomTable_Select_Controller;
 import project01.contoller.Custom_Select_Controller;
