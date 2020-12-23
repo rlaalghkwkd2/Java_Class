@@ -20,14 +20,13 @@ import project01.contoller.Custom_Select_Controller;
 public class Panel_BlackDelete_SelectAction implements ActionListener {
 	Container card_panel;
 	JTextField textSearch;
-	JTextArea textarea;
 	Vector rowData;
 	JTable table;
 	ArrayList<String> custom_info = new ArrayList<String>();
 
 	public Panel_BlackDelete_SelectAction(Container card_panel, Vector rowDate, JTextField textSearch, JTable table) {
 		this.card_panel = card_panel;
-		this.rowData = rowData;
+		this.rowData = rowDate;
 		this.textSearch = textSearch;
 		this.table = table;
 	}
@@ -38,17 +37,18 @@ public class Panel_BlackDelete_SelectAction implements ActionListener {
 		if (textSearch.getText().equals("")) {
 			System.out.println("ฐ๘น้");
 			new Black_Controller().BlackSelect_All();
-		} else if (!textSearch.getText().equals("")) {
-			new Black_Controller().BlackSelect_All();
-
-			for (int i = 0; i < Black_Controller.mo.size(); i++) {
-				if (Black_Controller.mo.get(i).equals(textSearch.getText())) {
-					custom_info.addAll(Custom_Select_Controller.mo);
-					Black_Controller.mo.removeAll(custom_info);
-					break;
-				}
-			}
 		}
+//		} else if (!textSearch.getText().equals("")) {
+//			new Black_Controller().BlackSelect_All();
+//
+//			for (int i = 0; i < Black_Controller.mo.size(); i++) {
+//				if (Black_Controller.mo.get(i).equals(textSearch.getText())) {
+//					custom_info.addAll(Custom_Select_Controller.mo);
+//					Black_Controller.mo.removeAll(custom_info);
+//					break;
+//				}
+//			}
+//		}
 
 		for (int i = panelBlackDelete.dtm.getRowCount() - 1; i >= 0; i--) {
 			panelBlackDelete.dtm.removeRow(i);
@@ -90,6 +90,6 @@ public class Panel_BlackDelete_SelectAction implements ActionListener {
 		Black_Controller.mo.removeAll(custom_info);
 		table.revalidate();
 		table.repaint();
-
+		textSearch.setText("");
 	}
 }

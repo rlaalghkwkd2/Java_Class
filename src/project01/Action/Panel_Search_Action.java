@@ -23,7 +23,7 @@ public class Panel_Search_Action implements ActionListener {
 
 	public Panel_Search_Action(Container card_panel, Vector rowDate, JTextField textSearch, JTable table) {
 		this.card_panel = card_panel;
-		this.rowData = rowData;
+		this.rowData = rowDate;
 		this.textSearch = textSearch;
 		this.table = table;
 

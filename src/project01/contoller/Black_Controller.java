@@ -108,7 +108,7 @@ public class Black_Controller {
 						this.mo.add(b_name), this.mo.add(b_age.toString()), this.mo.add(b_gender), this.mo.add(b_phone),
 						this.mo.add(b_email), this.mo.add(b_addr), this.mo.add(b_card), this.mo.add(b_reason),
 						this.mo.add(b_registration));
-				System.out.println(mo);
+//				System.out.println(mo);
 			}
 
 			if (rs != null)
@@ -151,7 +151,7 @@ public class Black_Controller {
 						this.mo.add(b_name), this.mo.add(b_age.toString()), this.mo.add(b_gender), this.mo.add(b_phone),
 						this.mo.add(b_email), this.mo.add(b_addr), this.mo.add(b_card), this.mo.add(b_reason),
 						this.mo.add(b_registration));
-				System.out.println(mo);
+//				System.out.println(mo);
 			}
 
 			if (rs != null)
@@ -194,7 +194,7 @@ public class Black_Controller {
 						this.mo.add(b_name), this.mo.add(b_age.toString()), this.mo.add(b_gender), this.mo.add(b_phone),
 						this.mo.add(b_email), this.mo.add(b_addr), this.mo.add(b_card), this.mo.add(b_reason),
 						this.mo.add(b_registration));
-				System.out.println(mo);
+				
 			}
 
 			if (rs != null)

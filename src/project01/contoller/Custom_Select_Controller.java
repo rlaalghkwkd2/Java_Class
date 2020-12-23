@@ -69,7 +69,7 @@ public class Custom_Select_Controller {
 					this.mo.add(c_card),											
 					this.mo.add(black_Whether)			
 						);
-			System.out.println(mo);
+//			System.out.println(mo);
 			System.out.println("회원 카드번호로 정보 조회");
 			} 
 			if(rs != null) {
@@ -129,7 +129,7 @@ public class Custom_Select_Controller {
 					this.mo.add(c_card),											
 					this.mo.add(black_Whether)
 				);
-				System.out.println(mo);
+//				System.out.println(mo);
 				System.out.println("회원 이름으로 정보 조회");
 			} 		
 			
@@ -188,7 +188,7 @@ public class Custom_Select_Controller {
 
 
 				} 		
-				System.out.println(mo);
+//				System.out.println(mo);
 				if(rs != null) {
 					rs.close();
 				}

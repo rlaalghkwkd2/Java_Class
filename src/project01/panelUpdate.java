@@ -195,7 +195,6 @@ public class panelUpdate extends JPanel implements ItemListener {
 		panelMenu.add(textAddr);
 		textAddr.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		textEmail02.setEditable(false);
-		textAddr.setEditable(false);
 		JLabel lblAge = new JLabel("\uC138");
 		lblAge.setBounds(177, 227, 20, 26);
 		panelMenu.add(lblAge);

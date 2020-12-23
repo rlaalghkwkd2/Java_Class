@@ -10,6 +10,7 @@ import javax.swing.table.DefaultTableModel;
 import com.sun.rowset.internal.Row;
 
 import project.swing.Action.Select_btnAction;
+import project01.Action.Panel_Check_Numer_Action;
 import project01.Action.Panel_Check__Card_Action;
 import project01.contoller.CustomTable_Select_Controller;
 import project01.contoller.Custom_Select_Controller;
@@ -101,8 +102,8 @@ public class panelCustomCheck extends JPanel {
 		btnNameSearch.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 15));
 		btnNameSearch.setBounds(730, 122, 35, 26);
 		add(btnNameSearch);
-		
-		btnNameSearch.addActionListener(arg0);
+		textNameSearch.addActionListener(new Panel_Check_Numer_Action(this, rowData));
+		btnNameSearch.addActionListener(new Panel_Check_Numer_Action(this, rowData));
 		
 		
 		JLabel lblnameSearch = new JLabel("\uACB0\uC81C\uBC88\uD638:");

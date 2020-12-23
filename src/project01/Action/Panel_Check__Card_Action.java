@@ -82,8 +82,6 @@ public class Panel_Check__Card_Action implements ActionListener {
 	
 		custom_info_copy.addAll(CustomTable_Select_Controller.mo);
 		CustomTable_Select_Controller.mo.removeAll(custom_info_copy);
-		panelCustomCheck.textCardSearch.setText("");
-		panelCustomCheck.textNameSearch.setText("");
 
 		
 	}

@@ -37,14 +37,11 @@ import javax.swing.Icon;
 public class panelBlackDelete extends JPanel {
 	private Image img_logo = new ImageIcon(Frame01.class.getResource("res/search.jpg")).getImage().getScaledInstance(65,
 			26, Image.SCALE_SMOOTH);
-
 	static Vector<String> columnNames = new Vector<String>(
 			Arrays.asList("번호", "이름", "나이", "성별", "핸드폰", "이메일", "주소", "카드번호", "블랙사유", "등록일"));
-
 	public static DefaultTableModel dtm = new DefaultTableModel(columnNames, 0);
 	JTable table = new JTable(dtm);
 	Vector rowData;
-
 	JPanel panelTtile = new JPanel();
 	JLabel lblTitle = new JLabel("\uBE14\uB799\uD68C\uC6D0 \uD574\uC81C");
 	JTextField textSearch = new JTextField();
@@ -83,8 +80,6 @@ public class panelBlackDelete extends JPanel {
 		lblTitle.setBounds(12, 10, 779, 49);
 		panelTtile.add(lblTitle);
 
-		
-		
 		JButton btnDelete = new JButton("\uC0AD\uC81C");
 		btnDelete.setFont(new Font("맑은 고딕 Semilight", Font.PLAIN, 15));
 		btnDelete.setBounds(730, 500, 65, 26);
@@ -94,18 +89,15 @@ public class panelBlackDelete extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				new Custom_BlackDelete_Contoller().BlackDelte(textSearch.getText());
-				
 				ShowTable();
 				textSearch.setText("");
-
 			}
 		});
 
 		ShowTable();
 
 		table.setCellSelectionEnabled(true);
-		
-		
+
 		ListSelectionModel select = table.getSelectionModel();
 		select.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 	}

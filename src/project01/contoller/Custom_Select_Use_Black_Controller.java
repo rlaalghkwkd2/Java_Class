@@ -54,7 +54,7 @@ public class Custom_Select_Use_Black_Controller {
 						this.mo.add(id.toString()), this.mo.add(c_name), this.mo.add(c_age.toString()),
 						this.mo.add(c_gender), this.mo.add(c_phone), this.mo.add(c_email), this.mo.add(c_addr),
 						this.mo.add(c_card), this.mo.add(black_Whether));
-				System.out.println(mo);
+//				System.out.println(mo);
 				System.out.println("회원 카드번호로 정보 조회");
 			}
 			if (rs != null) {

@@ -45,7 +45,7 @@ public class Custom_Deletes_Controller {
 		      pstmt2.executeUpdate();
 		        if(pstmt != null) pstmt.close();
 		        if(pstmt2 != null) pstmt2.close();
-		        if(pstmt3 != null) pstmt2.close();
+		        if(pstmt3 != null) pstmt3.close();
 				if(conn != null) conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();

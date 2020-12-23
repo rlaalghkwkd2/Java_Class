@@ -39,7 +39,8 @@ public class Frame01 extends JFrame {
 	private panelCustomDelete panelCustomDelete;
 	private panelBlackIn panelBlackIn;
 	private panelBlackDelete panelBlackDelete;
-//	private Test panelBlackDelete;
+
+	
 	private panleHome panelHome;
 	JPanel panelMenu = new JPanel();
 	JLabel panleLogo;
@@ -80,7 +81,8 @@ public class Frame01 extends JFrame {
 		panelCustomDelete = new panelCustomDelete();
 		panelBlackIn = new panelBlackIn();
 		panelBlackDelete = new panelBlackDelete();
-//		panelBlackDelete = new Test();
+	
+
 
 		panelMenu.setBackground(new Color(255, 165, 0));
 		panelMenu.setBounds(2, 2, 249, 557);
@@ -135,9 +137,9 @@ public class Frame01 extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				menuClicked(panelCustomCheck);
 				panelCustomCheck.textCardSearch.setText("");
+				panelCustomCheck.textNameSearch.setText("");
 				for (int i = panelCustomCheck.dtm.getRowCount() - 1; i >= 0; i--) {
 					panelCustomCheck.dtm.removeRow(i);
-
 				}
 			}
 		});
@@ -176,6 +178,7 @@ public class Frame01 extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				menuClicked(panelCustomDelete);
+				panelCustomDelete.textSearch.setText("");
 				
 			}
 		});
@@ -195,6 +198,8 @@ public class Frame01 extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				menuClicked(panelBlackIn);
+				panelBlackIn.textcard.setText("");
+				panelBlackIn.reason.setText("");
 				panelBlackIn.textArea.setText("");
 			}
 		});
@@ -214,7 +219,7 @@ public class Frame01 extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				menuClicked(panelBlackDelete);
-				new panelBlackDelete();
+				new panelBlackDelete();			
 			}
 		});
 		panelBlackDeletes.setLayout(null);
