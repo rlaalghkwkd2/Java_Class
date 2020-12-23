@@ -10,15 +10,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Properties;
-
 import javax.smartcardio.Card;
-
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-
-import project.method.Create_card;
-
-
+import project01.Create_card;
 
 public class Custom_Registration_Controller {
 	Create_card cards = new Create_card();

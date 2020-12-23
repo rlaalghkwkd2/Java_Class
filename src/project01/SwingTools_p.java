@@ -1,4 +1,4 @@
-package project.method;
+package project01;
 
 import javax.swing.JFrame;
 
